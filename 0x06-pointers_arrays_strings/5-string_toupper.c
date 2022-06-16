@@ -1,18 +1,23 @@
-#include "../holberton.h"
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - check the code for ALX School students.
+ * string_toupper - Changes all lowercase letters
+ *                  of a string to uppercase.
+ * @str: The string to be changed.
  *
- * Return: Always 0.
+ * Return: A pointer to the changed string.
  */
-int main(void)
+char *string_toupper(char *str)
 {
-	char str[] = "Holberton School!\n";
-	char *ptr;
+	int index = 0;
 
-	ptr = string_toupper(str);
-	printf("%s", ptr);
-	printf("%s", str);
-	return (0);
+	while (str[index])
+	{
+		if (str[index] >= 'a' && str[index] <= 'z')
+			str[index] -= 32;
+
+		index++;
+	}
+
+	return (str);
 }
