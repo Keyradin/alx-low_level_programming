@@ -33,3 +33,4 @@ int *array_range(int min, int max)
 	if (max == min)
 		p[i] = max;
 	return (p);
+}
